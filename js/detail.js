@@ -1,5 +1,5 @@
-var inputFile = "https://raw.githubusercontent.com/17042852D-finalProject/17042852D-finalProject.github.io/master/storage/SearchResultCriteria.txt";
-var jsonFile = 'https://raw.githubusercontent.com/17042852D-finalProject/17042852D-finalProject.github.io/master/storage/game.json';
+var inputFile = "https://raw.githubusercontent.com/17042852D-finalProject/17042852D-finalProject/master/storage/SearchResultCriteria.txt";
+var jsonFile = 'https://raw.githubusercontent.com/17042852D-finalProject/17042852D-finalProject/master/storage/game.json';
 $(document).ready(function(){
 	var searchKeyword = getUrlParameter("search");
 	if(searchKeyword)

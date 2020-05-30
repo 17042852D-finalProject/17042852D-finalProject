@@ -1,5 +1,5 @@
 const dynamicLoadCount = 6; //number of item will load when user scroll to the bottom;
-const jsonFile = 'https://raw.githubusercontent.com/17042852D-finalProject/17042852D-finalProject.github.io/master/storage/game.json';
+const jsonFile = 'https://raw.githubusercontent.com/17042852D-finalProject/17042852D-finalProject/master/storage/game.json';
 
 $(document).ready(function(){
 	loadContent();
