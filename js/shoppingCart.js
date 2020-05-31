@@ -104,4 +104,5 @@ function refreshCookieCart(){
         cart_list.cart.push(productJson);
     });
     $.cookie('cart_list',JSON.stringify(cart_list),{path:'/'});
+    loadCart();
 }
