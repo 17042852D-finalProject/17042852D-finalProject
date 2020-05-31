@@ -13,9 +13,17 @@ $(document).ready(function(){
 					for(var i=0;i < dynamicLoadCount;i++){
 						var url = window.location.href;
 						if(url.indexOf('?')>=0) {
-							var url = url.replace('index.html','detail.html')+"&id="+data.products[i].productID;
+							if(url.indexOf('index.html')>=0)
+								url = url.replace('index.html','detail.html')+"&id="+data.products[i].productID;
+							else
+							{
+								url = 'detail.html' + location.search +"&id="+data.products[i].productID;
+							}
 						}else{
-							var url = url.replace('index.html','detail.html')+"?id="+data.products[i].productID;
+							if(url.indexOf('index.html')>=0)
+								url = url.replace('index.html','detail.html')+"?id="+data.products[i].productID;
+							else
+								url = 'detail.html?id='+data.products[i].productID;
 						}
 						innerHTML += '<div class="col-sm-6 col-md-4 product border-0">';
 						innerHTML += '<div class="thumbnail">';
