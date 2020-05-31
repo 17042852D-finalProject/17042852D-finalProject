@@ -29,6 +29,8 @@ $(document).ready(function(){
 
 	//retrieveProduct
 	var productId = getUrlParameter("id");
+	if(productId == "" || productId == null)
+		window.location.href = "index.html";
 	$.getJSON(jsonFile, function(data) {
 		$(data.products).each(function(index,json){
 			if(json.productID == productId){//get the corresponding product
@@ -134,6 +136,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 function changeImageContent(ele){
-	$("#product_img").find("img").attr("src", $(ele).find("img").attr("src")); 
+	$("#product_img").attr("src", $(ele).find("img").attr("src")); 
 }
 
