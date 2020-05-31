@@ -99,7 +99,7 @@ $(document).ready(function(){
 				}
 				cart_list['cart'].push(itemJson);
 			}
-			$.cookie('cart_list',JSON.stringify(cart_list),{path:'/'});
+			$.cookie('cart_list',JSON.stringify(cart_list),{ expires:30, path: '/' });
 		} else {//don't have cookie
 			var cart_list = {
 				"cart":[

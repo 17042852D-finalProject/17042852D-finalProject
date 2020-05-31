@@ -59,7 +59,7 @@ function removeCartItem(eleId){
             $.cookie('cart_list', null,{path:'/'});
             $.removeCookie('cart_list',{path:'/'});
         }else{
-            $.cookie('cart_list',JSON.stringify(cart_list));
+            $.cookie('cart_list',JSON.stringify(cart_list),{path:'/'});
         }
         loadCart();
     }
